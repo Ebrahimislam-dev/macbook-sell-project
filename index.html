@@ -13,92 +13,103 @@
 </head>
 
 <body>
+
     <main class="container my-5">
-        <div class="row">
-            <div class="col-6">
-                <img class="w-75" src="images/mac.png" alt="">
+        <section>
+            <div class="row">
+                <!-- image part -->
+                <div class="col-6">
+                    <img class="w-75" src="images/mac.png" alt="">
+                </div>
+                <!-- description part -->
+                <div class="col-6">
+                    <h2> Customize your Blue 24-inch
+                        <br>
+                        iMac with Apple M1 chip.
+                    </h2>
+                    <p>
+                        Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency
+                        cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB
+                        SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard -
+                        US English
+                    </p>
+                    <!-- Memory section -->
+                    <div class="my-5">
+                        <h5>Memory</h5>
+                        <div>
+                            <button id="btn-memory-8gb" class="border-2 rounded shadow hover-btn">
+                                8GB unified memory
+                            </button>
+                            <button id="btn-memory-16gb" class="border-2 rounded shadow hover-btn">
+                                16GB unified memory
+                            </button>
+                        </div>
+                    </div>
+                    <!-- storage section -->
+                    <div class="my-5">
+                        <h5> Storage</h5>
+                        <div>
+                            <button id="btn-storage-256gb" class="border-2 rounded  shadow hover-btn">
+                                256GB SSD storage
+                            </button>
+                            <button id="btn-storage-512gb" class="border-2 rounded shadow hover-btn">
+                                512GB SSD storage
+                            </button>
+                            <button id="btn-storage-1tb" class="border-2 rounded shadow hover-btn">
+                                1TB SSD storage
+                            </button>
+                        </div>
+                    </div>
+                    <!-- delivery section -->
+                    <div class="my-5">
+                        <h5> Choose your delivery option</h5>
+                        <div>
+                            <button id="btn-free-delivery" class="border-2 rounded shadow mb-2 hover-btn">
+                                Friday, Aug 25 FREE Prime Delivery
+                            </button>
+                            <button id="btn-delivery-cost" class="border-2 rounded shadow hover-btn">
+                                Delivery Friday, Aug 21 Delivery charge $20
+                            </button>
+                        </div>
+                    </div>
+                    <!-- balance section -->
+                    <div class="fw-bolder my-5">
+
+                        <div class="row row-cols-2">
+                            <div class="col"> Best Price</div>
+                            <div class="col">1299</div>
+
+                            <div class="col">Extra Memory Cost</div>
+                            <div class="col">$<span id="memory-price">0</span></div>
+
+                            <div class="col">Extra Storage Cost</div>
+                            <div class="col">$<span id="storage-price">0</span></div>
+
+                            <div class="col">Delivery charge</div>
+                            <div class="col">$<span id="delivery-price" >0</span></div>
+
+                        </div>
+                        <hr>
+                        <div class="row row-cols-2 ">
+                            <div class="col">Total Price</div>
+                            <div class="col">$<span id="total-balance">1299</span></div>
+                        </div>
+
+                    </div>
+                    <!-- bonus part -->
+                    <div class="my-5">
+                        <h5>Add pomo code</h5>
+                        <input type="text" name="" id="pomo-filed" placeholder="Add your pomo code">
+                        <button id="pomo-btn" class="bg-danger text-white border-2 rounded"> Apply</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
-                <h2> Customize your Blue 24-inch
-                    <br>
-                    iMac with Apple M1 chip.
-                </h2>
-                <p>
-                    Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency
-                    cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB
-                    SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard -
-                    US English
-                </p>
-                <div class="my-5">
-                    <h5>Memory</h5>
-                    <div>
-                        <button class="border-2 rounded shadow hover-btn">
-                            8GB unified memory
-                        </button>
-                        <button class="border-2 rounded shadow hover-btn">
-                            16GB unified memory
-                        </button>
-                    </div>
-                </div>
-                <div class="my-5">
-                    <h5> Storage</h5>
-                    <div>
-                        <button class="border-2 rounded  shadow hover-btn">
-                            256GB SSD storage
-                        </button>
-                        <button class="border-2 rounded shadow hover-btn">
-                            512GB SSD storage
-                        </button>
-                        <button class="border-2 rounded shadow hover-btn">
-                            1TB SSD storage
-                        </button>
-                    </div>
-                </div>
-                <div class="my-5">
-                    <h5> Choose your delivery option</h5>
-                    <div>
-                        <button class="border-2 rounded shadow mb-2 hover-btn">
-                            Friday, Aug 25 FREE Prime Delivery
-                        </button>
-                        <button class="border-2 rounded shadow hover-btn">
-                            Delivery Friday, Aug 21 Delivery charge $20
-                        </button>
-                    </div>
-                </div>
-                <div class="fw-bolder my-5">
-
-                    <div class="row row-cols-2">
-                        <div class="col"> Best Price</div>
-                        <div class="col">1299</div>
-
-                        <div class="col">Extra Memory Cost</div>
-                        <div class="col">$<span>0</span></div>
-
-                        <div class="col">Extra Storage Cost</div>
-                        <div class="col">$<span>0</span></div>
-
-                        <div class="col">Delivery charge</div>
-                        <div class="col">$<span>0</span></div>
-
-                    </div>
-                    <hr class="border-2 bg-dark">
-                    <div class="row row-cols-2 ">
-                        <div class="col">Total Price</div>
-                        <div class="col">$<span>1299</span></div>
-                    </div>
-
-                </div>
-                <div class="my-5">
-                    <h5>Add pomo code</h5>
-                    <input type="text" name="" id="" placeholder="Add your pomo code">
-                    <button class="bg-danger text-white border-2 rounded"> Apply</button>
-                </div>
+            <hr>
+            <!-- bonus total  -->
+            <div class="text-center">
+                <h2>Total: $<span id="totalcost">1299</span></h2>
             </div>
-        </div>
-        <hr>
-        <div class="text-center">
-            <h2>Total: $<span>1299</span></h2>
-        </div>
+        </section>
     </main>
 
     <script src="js/script.js"></script>
