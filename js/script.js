@@ -1,22 +1,24 @@
+// Set Product Price by button
 function setProductPrice(product, cost) {
     const productCost = document.getElementById(product + '-price');
     productCost.innerText = cost;
-    const productCosting = parseFloat(productCost.innerText)
-    // get total cost
-    const totalBalance = document.getElementById('total-balance');
-    const prevtotal = parseFloat(totalBalance.innerText);
-    // add costings
-    totalBalance.innerText = prevtotal + productCosting;
-    // bonus total cost part 
-    let totalcost = document.getElementById('totalcost');
-    totalcost.innerText = totalBalance.innerText;
+    getTotalPrice()
 }
-
+// set Total cost by function
+function getTotalPrice() {
+    const extraMemoryPrice = parseFloat(document.getElementById('memory-price').innerText);
+    const extraStoragePrice = parseFloat(document.getElementById('storage-price').innerText);
+    const extraDeliveryCharge = parseFloat(document.getElementById('delivery-price').innerText);
+    const bestPrice = parseFloat(document.getElementById('best-price').innerText);
+    const Total = extraMemoryPrice + extraStoragePrice + extraDeliveryCharge + bestPrice;
+    document.getElementById('total-balance').innerText = Total;
+    document.getElementById('totalcost').innerText = Total;
+}
 
 // memory 8gb event handeler
 document.getElementById('btn-memory-8gb').addEventListener('click', function () {
 
-    const memory8gbCost = setProductPrice('memory', 10);
+    const memory8gbCost = setProductPrice('memory', 0);
 
 
 
@@ -61,8 +63,8 @@ document.getElementById('btn-delivery-cost').addEventListener('click', function 
 })
 
 
-// bonus part
- document.getElementById('pomo-btn').
+// ---------------bonus part------------------//
+document.getElementById('pomo-btn').
     addEventListener('click', function () {
         // get pomofiled
         const pomofiled = document.getElementById('pomo-filed');
@@ -72,7 +74,7 @@ document.getElementById('btn-delivery-cost').addEventListener('click', function 
         let totalcosting = parseFloat(totalcost.innerText);
         if (userpomo == 'stevekaku') {
             // give discount
-           const totalcostdiscount = totalcosting * 0.2;
+            const totalcostdiscount = totalcosting * 0.2;
             totalcost.innerText = totalcosting - totalcostdiscount;
         }
         else {
@@ -81,4 +83,4 @@ document.getElementById('btn-delivery-cost').addEventListener('click', function 
         // clear pomocode field
         pomofiled.value = "";
 
-    }) 
+    })

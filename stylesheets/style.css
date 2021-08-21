@@ -1,3 +1,6 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
 /* button style */
 .hover-btn:hover{
     background-color: black;
