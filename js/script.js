@@ -70,12 +70,16 @@ document.getElementById('pomo-btn').
         const pomofiled = document.getElementById('pomo-filed');
         const userpomo = pomofiled.value;
         // get totalcost
-        const totalcost = document.getElementById('totalcost');
-        let totalcosting = parseFloat(totalcost.innerText);
+        const totalcost = document.getElementById('totalcost')
+        // get total balance cost
+        const totalbalancecost = document.getElementById('total-balance');
+        let totalbalancecosting = parseFloat(totalbalancecost.innerText);
+
+        // handeling pomocode
         if (userpomo == 'stevekaku') {
             // give discount
-            const totalcostdiscount = totalcosting * 0.2;
-            totalcost.innerText = totalcosting - totalcostdiscount;
+            const totalcostdiscount = totalbalancecosting * 0.2;
+            totalcost.innerText = totalbalancecosting - totalcostdiscount;
         }
         else {
             alert('invalid pomocode')
