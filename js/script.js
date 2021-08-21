@@ -2,12 +2,13 @@ function setProductPrice(product, cost) {
     const productCost = document.getElementById(product + '-price');
     productCost.innerText = cost;
     const productCosting = parseFloat(productCost.innerText)
+    // get total cost
     const totalBalance = document.getElementById('total-balance');
     const prevtotal = parseFloat(totalBalance.innerText);
+    // add costings
     totalBalance.innerText = prevtotal + productCosting;
+    // bonus total cost part 
     let totalcost = document.getElementById('totalcost');
-    // let totalcosting = parseFloat(totalcost.innerText);
-
     totalcost.innerText = totalBalance.innerText;
 }
 
@@ -59,31 +60,25 @@ document.getElementById('btn-delivery-cost').addEventListener('click', function 
 
 })
 
-/* let totalcost = document.getElementById('totalcost');
-let totalcosting = parseFloat(totalcost.innerText);
-const totalbalance = document.getElementById('total-balance');
-const totalbalancecost = parseFloat(totalbalance.innerText);
-totalcost.innerText = totalbalancecost; */
 
 // bonus part
  document.getElementById('pomo-btn').
     addEventListener('click', function () {
+        // get pomofiled
         const pomofiled = document.getElementById('pomo-filed');
         const userpomo = pomofiled.value;
+        // get totalcost
         const totalcost = document.getElementById('totalcost');
         let totalcosting = parseFloat(totalcost.innerText);
-       
-
-
-
-
         if (userpomo == 'stevekaku') {
+            // give discount
            const totalcostdiscount = totalcosting * 0.2;
             totalcost.innerText = totalcosting - totalcostdiscount;
         }
         else {
             alert('invalid pomocode')
         }
+        // clear pomocode field
         pomofiled.value = "";
 
     }) 
